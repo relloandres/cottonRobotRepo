@@ -1,0 +1,40 @@
+{
+    "cycleConstants": {
+        "0": {
+            "navigationType": 0,
+            "verticalNavigation": 0,
+            "horizontalNavigation": 90,
+            "startPoint": [x,y],
+            "finalPoint": [x,y],
+            "setOrientationTheta": 270,
+        }
+        "1": {
+            "navigationType": 1,
+            "horizontalNavigation": 270,
+            "startPointX": x,
+            "startPointTheta": 90,
+            "finalPoint": [x,y],
+            "setOrientationTheta": 90,
+        }
+    }
+}
+
+
+navigationType:
+    - 0: There are always two perpendicular walls in Lidar FoV.
+        In this case the following constants are needed:
+            - verticalNavigation: Specifies the wall that will be used to define position in the y-axis
+            - horizontalNavigation: Specifies the wall that will be used to define position in the x-axis at the start of the cycle. At the end of the cycle the opposite wall will be used
+            - startPoint: Point where the robot will navigate at the start of the cycle. 
+            - finalPoint: Point where the robot will navigate at the end of the cycle.
+            - setOrientationTheta: Specifies the wall that will be used to set the correct orientation of the robot at the end of the cycle
+     - 1: There is only the East-West wall in Lidar FoV
+        In this case the following constants are needed:
+            - horizontalNavigation: Specifies the wall that will be used to define position in the x-axis at the start of the cycle. At the end of the cycle the opposite wall will be used
+            - startPointX: Point in the horizontal direction where the robot will navigate at the start of the cycle. 
+            - startPointTheta: Defines in which direction the lidar should look to find columns to define its vertical position
+            - finalPoint: Point where the robot will navigate at the end of the cycle.
+            - setOrientationTheta: Specifies the wall that will be used to set the correct orientation of the robot at the end of the cycle
+
+
+     
